@@ -32,7 +32,7 @@ private:
 	int typeCounter;
 	sf::Text title1;
 	sf::Text title2;
-
+	sf::Text myname;
 	//sf::Sprite titleSprite1;
 	//sf::Sprite titleSprite2;
 };

@@ -16,6 +16,14 @@ MenuState::MenuState(StateStack& stack, Context context, StatesID::ID stateID)
 	mPlayer.setLives(2);
 
 	typeCounter = 0;
+	auto wSize = context.window->getView().getSize();
+
+	myname.setFont(context.fonts->get(Fonts::Main));
+	myname.setColor(sf::Color(0, 164, 0, 255));
+	myname.setCharacterSize(75);
+	myname.setString("Diego Martinez");
+	centerOrigin(myname);
+	myname.setPosition(wSize.x / 2.f, (wSize.y - (wSize.y / 4.f)));
 	title1.setFont(context.fonts->get(Fonts::Main));
 	title2.setFont(context.fonts->get(Fonts::Main));
 	title1.setColor(sf::Color(0, 164, 0, 255));
@@ -26,7 +34,7 @@ MenuState::MenuState(StateStack& stack, Context context, StatesID::ID stateID)
 	centerOrigin(title2);
 	title1.setString(">");
 	title2.setString("_");
-	auto wSize = context.window->getView().getSize();
+	
 	title1.setPosition(wSize.x / 2.f, wSize.y / 4.f);
 	title2.setPosition(wSize.x / 2.f, wSize.y / 4.f);
 
@@ -68,6 +76,7 @@ void MenuState::draw() {
 	blackBackground.setSize(window.getView().getSize());
 	window.draw(blackBackground);
 	window.draw(title1);
+	window.draw(myname);
 	if (blink)
 		window.draw(title2);
 
