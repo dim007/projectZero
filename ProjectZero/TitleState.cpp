@@ -16,8 +16,8 @@ TitleState::TitleState(StateStack& stack, Context context, StatesID::ID stateID)
 	mTitleText2.setString("_");
 	mTitleText1.setCharacterSize(100);
 	mTitleText2.setCharacterSize(100);
-	mTitleText1.setColor(sf::Color(0, 164, 0, 255)); //terminal green
-	mTitleText2.setColor(sf::Color(0, 164, 0, 255)); //terminal green
+	mTitleText1.setFillColor(sf::Color(0, 164, 0, 255)); //terminal green
+	mTitleText2.setFillColor(sf::Color(0, 164, 0, 255)); //terminal green
 	centerOrigin(mTitleText1);
 	centerOrigin(mTitleText2);
 	mTitleText1.setPosition(context.window->getView().getSize().x / 2.f, context.window->getView().getSize().y / 4.f);

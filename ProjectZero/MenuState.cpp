@@ -19,15 +19,15 @@ MenuState::MenuState(StateStack& stack, Context context, StatesID::ID stateID)
 	auto wSize = context.window->getView().getSize();
 
 	myname.setFont(context.fonts->get(Fonts::Main));
-	myname.setColor(sf::Color(0, 164, 0, 255));
+	myname.setFillColor(sf::Color(0, 164, 0, 255));
 	myname.setCharacterSize(75);
 	myname.setString("Diego Martinez");
 	centerOrigin(myname);
 	myname.setPosition(wSize.x / 2.f, (wSize.y - (wSize.y / 4.f)));
 	title1.setFont(context.fonts->get(Fonts::Main));
 	title2.setFont(context.fonts->get(Fonts::Main));
-	title1.setColor(sf::Color(0, 164, 0, 255));
-	title2.setColor(sf::Color(0, 164, 0, 255));
+	title1.setFillColor(sf::Color(0, 164, 0, 255));
+	title2.setFillColor(sf::Color(0, 164, 0, 255));
 	title1.setCharacterSize(100);
 	title2.setCharacterSize(100);
 	centerOrigin(title1); //move origin from top left corner to center of image
@@ -219,8 +219,8 @@ void MenuState::updateOptionText() {
 	if (mOptions.size() == 0)
 		return;
 	for (sf::Text& text : mOptions) {
-		text.setColor(sf::Color::White);
+		text.setFillColor(sf::Color::White);
 	}
-	mOptions[mOptionIndex].setColor(sf::Color::Red);
+	mOptions[mOptionIndex].setFillColor(sf::Color::Red);
 
 } */

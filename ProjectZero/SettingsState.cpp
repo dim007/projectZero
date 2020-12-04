@@ -13,15 +13,15 @@ SettingsState::SettingsState(StateStack& stack, Context context, StatesID::ID st
 	addButtonLabel(Player::MoveUp, 250.f, "Move Up", context);
 	addButtonLabel(Player::MoveDown, 300.f, "Move Down", context);
 	addButtonLabel(Player::Jump, 350.f, "Jump", context);
-	addButtonLabel(Player::Dash, 375.f, "Dash", context);
-	addButtonLabel(Player::Fire, 400.f, "Fire", context);
-	addButtonLabel(Player::LaunchMissile, 425.f, "Missile", context);
-	addButtonLabel(Player::Slash, 450.f, "Attack", context);
+	addButtonLabel(Player::Dash, 400.f, "Dash", context);
+	addButtonLabel(Player::Fire, 450.f, "Fire", context);
+	addButtonLabel(Player::LaunchMissile, 500.f, "Missile", context);
+	addButtonLabel(Player::Slash, 550.f, "Attack", context);
 
 	updateLabels();
 
 	auto backButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-	backButton->setPosition(80.f, 425.f);
+	backButton->setPosition(200.f, 650.f);
 	backButton->setText("Back");
 	backButton->setCallback(std::bind(&SettingsState::requestStackPop, this));
 

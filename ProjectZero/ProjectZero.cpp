@@ -9,8 +9,6 @@ using namespace std;
 int main()
 {
 	try {
-		//Game game; //old stateless code
-		//game.run();
 		Application app;
 		app.run();
 	}
